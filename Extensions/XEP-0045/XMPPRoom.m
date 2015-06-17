@@ -864,6 +864,11 @@ enum XMPPRoomState
 
 - (void)sendMessage:(XMPPMessage *)message
 {
+    [self sendMessage:message andGetReceipt:nil];
+}
+
+- (void)sendMessage:(XMPPMessage *)message andGetReceipt:(XMPPElementReceipt **)receipt
+{
 	dispatch_block_t block = ^{ @autoreleasepool {
 		
 		XMPPLogTrace();
@@ -871,7 +876,7 @@ enum XMPPRoomState
 		[message addAttributeWithName:@"to" stringValue:[roomJID full]];
 		[message addAttributeWithName:@"type" stringValue:@"groupchat"];
 		
-		[xmppStream sendElement:message];
+		[xmppStream sendElement:message andGetReceipt:receipt];
 		
 	}};
 	
