@@ -883,7 +883,7 @@ enum XMPPRoomState
 	if (dispatch_get_specific(moduleQueueTag))
 		block();
 	else
-		dispatch_async(moduleQueue, block);
+		dispatch_sync(moduleQueue, block);
 }
 
 - (void)sendMessageWithBody:(NSString *)messageBody
