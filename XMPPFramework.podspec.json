@@ -15,8 +15,7 @@
     "Robbie Hanson": "robbiehanson@deusty.com"
   },
   "source": {
-    "git": "https://github.com/robbiehanson/XMPPFramework.git",
-    "tag": "3.6.4"
+    "git": "https://github.com/robbiehanson/XMPPFramework.git"
   },
   "resources": [
     "**/*.{xcdatamodel,xcdatamodeld}"
@@ -97,7 +96,7 @@
           "~>1.9"
         ],
         "CocoaAsyncSocket": [
-          "~>7.3.5"
+          "~>7.4"
         ]
       },
       "ios": {

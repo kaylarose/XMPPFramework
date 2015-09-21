@@ -1,10 +1,6 @@
 #import <Foundation/Foundation.h>
 
-#if !(TARGET_IPHONE_SIMULATOR)
-@import libxml;
-#else
-@import libxmlSimu;
-#endif
+#import <libxml/tree.h>
 
 @class DDXMLDocument;
 
