@@ -776,7 +776,7 @@ enum XMPPStreamConfig
 	if (dispatch_get_specific(xmppQueueTag))
 		block();
 	else
-		dispatch_async(xmppQueue, block);
+		dispatch_sync(xmppQueue, block);
 }
 
 - (void)removeDelegate:(id)delegate delegateQueue:(dispatch_queue_t)delegateQueue
